@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+:root {
+  --container: 1100px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  @apply max-w-[var(--container)] mx-auto px-4;
+}
+
+.section {
+  @apply py-10 md:py-16;
+}
+
+.link {
+  @apply text-brand hover:text-brand-dark transition-colors;
+}
+
+.card {
+  @apply rounded-xl border border-slate-200/40 dark:border-slate-700/60 bg-white/70 dark:bg-slate-800/70 backdrop-blur shadow-sm hover:shadow-soft transition-all;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg bg-brand px-5 py-2.5 font-medium text-white shadow hover:bg-brand-dark active:scale-[0.99] transition;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 font-medium text-slate-700 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition;
+}
